@@ -32,3 +32,9 @@ python3 -m http.server 8000   # then open http://localhost:8000
 - `js/app.js` – state, routing (hash based), views, certificate, parents area
 
 To add a lesson, add an object to a course's `lessons` array in `js/content.js` with `slides` and an `activity` using one of the game types.
+
+## Tests
+End-to-end test (Playwright, Python) that plays every lesson, passes every quiz and generates certificates:
+```
+python3 tests/e2e.py http://localhost:8000/ ro   # or en
+```
